@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>University Guidance</title>
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+      <link rel="manifest" href="site.webmanifest">
+      <!--Fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;1,300&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/satStyle.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+      <!-- Navigation bar  -->
+      <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-light" id = "nav">
+        <div class = "navbar-brand" id = "logo">
+          <img src="logo.png" class="d-inline-block align-top" alt="Highway Logo" id = "logo-img">
+        </div>
+        <ul class="navbar-nav", id = "navigation">
+          <li class="nav-item active">
+            <a class="nav-link" id = "home" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Story</a>
+              <a class="dropdown-item" href="#">The Team</a>
+              <a class="dropdown-item" href="#">Our Partners</a>
+            </div>
+          </li>-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/SAT">SAT Prep</a>
+            <a class="dropdown-item" href="#">University Guidance</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Opportunities 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">For High School Students</a>
+            <a class="dropdown-item" href="#">For University Students</a>
+            </div>
+          </li>
+    
+          <li class="nav-item active"id = "butt-nav" >
+            <a class="nav-link" href="#"><button  class = "colored-butt">Enroll </button></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Sign up form -->
+      <div class="container contact-form">
+        <div class="contact-image">
+          
+            <img id = "guidance" src="images/education.png" alt="graduation hat"/>
+        </div>
+        <form action = "/guidance" method="post">
+            <h3>Sign up for University Guidance </h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                    </div>
+                    <div class="form-group">
+                      <input type="url" name="urlFB" class="form-control" placeholder="Your Facebook Profile Link *" value="" />
+                  </div>
+
+                  <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Sign up" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <input type="text" name="txtSchool" class="form-control" placeholder="Your High School *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <select name="grade" class="form-control" placeholder="Your Grade *" value="" >
+                            <option value="">Your Grade * </option>
+                            <option value="">1 ère </option>
+                            <option value="">2 ème </option>
+                            <option value="">3 ème </option>
+                            <option value="">Bac </option>
+                            <option value="">Other </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <select name="source" class="form-control" placeholder="Your Grade *"  value="" >
+                          <option value="">You Heard of us throguh * </option>
+                          <option value="">Facebook</option>
+                          <option value="">Instagram </option>
+                          <option value="">Club </option>
+                          <option value="">Highway Ambassador </option>
+                          <option value="">Friend</option>
+                      </select>
+                  </div>
+                    <div class="form-group">
+                        <input type="number" name="promo" class="form-control" placeholder="Your Code From a Partner Club or Ambassador" value="" />
+                    </div>
+                </div>
+             </div>
+        </form>
+   </div>
+   <div class="container-fluid pb-0 mb-0 justify-content-center  ">
+    <footer>
+        <div class="row my-5 justify-content-center py-5">
+            <div class="col-11">
+                <div class="row ">
+                    <div class="col-xl-5 col-md-4 col-sm-4 col-12 my-auto  a">
+                      <img src="logo.png" alt="Highway Logo" id ="footer-img">
+                    </div>
+                    <div class="col-xl-3 col-md-4 col-sm-4 col-12">
+                        <h6 class="mb-3 mb-lg-4 bold-text "><b>Company</b></h6>
+                        <ul class="list-unstyled">
+                            <li>About</li>
+                            <li>Careers</li>
+                            <li>Team</li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-md-4 col-sm-4 col-12">
+                        <h6 class="mb-3 mb-lg-4 bold-text"><b>Contact Us</b></h6>
+                        <p class="mb-1"><span>&#9993;</span> highway.tunis@gmail.com</p>
+                        <p class="mb-1"><span>&#9990;</span> +216 56 161 653</p>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end" id = "rights">
+                          <div>
+                            <img src="images/instagram 1.png" alt="Highway Logo" > 
+                            <img src="images/Group.png" alt="Highway Logo" >
+                        </div>
+                          <small><span>&#174;</span> International Highway 2021. All rights reserved</small>
+                       
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+ <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+</body>
+</html>
