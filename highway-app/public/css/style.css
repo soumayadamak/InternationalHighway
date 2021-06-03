@@ -1,0 +1,362 @@
+html, body {
+    width: 100%;
+ 
+    margin:0;
+    height:100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+
+/*Navigation Bar */
+/* the zoom in and out is miserable : text and image */ 
+#nav{
+    padding: 0px; 
+    background-color: white; 
+    height: 15%;  
+    width : 100%;
+    display: flex;
+    flex-direction: row;  
+}
+#nav >ul{
+    flex-grow: 2;
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#logo{
+    position: relative;  
+    flex-basis: 30%;
+    flex-shrink: 1;
+}
+#logo-img{
+    position:absolute;
+    left:50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width:50%;  
+
+}
+
+.nav-item {
+    padding-left : 7%;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 23px;
+    color: #000000;
+}
+
+/*End of Navigation Bar */
+
+/* beginning home section */ 
+#home{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 23px;
+    /* identical to box height */
+
+
+    /* 1f1534-hyfen */
+
+    color: #000000;
+}
+.colored-butt{
+    background: #CE6262;
+    border-radius: 55px;
+    width : 7em;
+    border: none;
+    
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 39px;
+    /* or 333% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
+#butt-nav a{
+    padding-top: 0px;
+}
+
+/* end of navigation bar */ 
+
+
+
+.home-section{
+    margin-top:-15%;
+    padding-top: 10%;
+}
+
+.first-title{
+    /*position: absolute;
+    left: 11.44%;
+    right: 60.19%;
+    top: 4.82%;
+    bottom: 93.27%;*/
+    padding-left: 10%;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 32px;
+    /* or 117% */
+
+    color: #000000;
+    mix-blend-mode: normal;
+    display: inline-block;
+    /*overflow: hidden;*/
+    height: 100%;
+    width: 100%;
+}
+.first-para{
+    width: 100%;
+    margin-top: 5%;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 32px;
+    /* or 152% */
+
+    color: #7D7987;
+    mix-blend-mode: normal;
+}
+.row1
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top: 10%;
+}
+    
+.home-section .row .subheading{
+    text-align: center;
+}
+#row3{
+    margin-top: 5%;
+}
+#img3{
+    height: 90%;
+    width: 90%;
+}
+.home-section .subheading{
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight:bold;
+    font-size: 2.5vw;
+    line-height: 2.5vmax;
+    /* or 117% */
+
+
+    color: #000000;
+    mix-blend-mode: normal;
+    display: inline-block;
+    /*overflow: hidden;*/
+
+    width: 100%;
+
+}
+hr{
+    width: 56px;
+    height: 2px;
+    background: #000000;
+    border-radius: 5px;
+    margin:auto;
+    
+}
+.break{
+    text-align: center;
+    padding-top: 5%;
+}
+.how-img 
+{   width: 50%;
+    
+}
+.how-img img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.white-butt{
+    background:  #FFFFFF;
+    border-radius: 55px;
+    width : 150px;
+    border-color: #CE6262;
+    
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 39px;
+    /* or 333% */
+
+    text-align: center;
+
+    color: #CE6262;
+
+    mix-blend-mode: normal;
+}
+
+.col-md-6-text{
+    width:40%;
+    padding-top: 5%;
+    padding-left: 5%;;
+    margin-right: 0px;
+}
+
+/* forms */
+#email{
+    border-radius: 55px;
+    color:#CE6262;
+    text-align: left;
+    border-color: #CE6262;
+    width: 40%;
+    display: block;
+    margin-bottom: 2%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7.5%;
+ 
+}
+.newsletter{
+    text-align: center;
+}
+
+/*-- testimonial Section CSS --*/
+#testimonial {
+    padding: 5% 0px 0px;;
+    color: #fff;
+    background-color:#CE6262;
+    width: 80%;
+    margin: 3% auto;
+    height: 500px;
+}
+#testimonial h4 {
+   
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+#testimonial .client-img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    margin: 0px auto;
+    border-radius: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+#testimonial .carousel-content {
+    padding: 20px 0px 20px 100px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+#testimonial hr{
+    border-color: #fff;
+}
+#testimonial h3 {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: right;
+}
+#testimonial p i {
+    font-size: 15px;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+}
+#testimonial .client-img img {
+    width: 100%;
+}
+#testimonial .carousel-control-prev,
+#testimonial .carousel-control-next {
+    font-size: 36px;
+}
+.container, .row4, #slides {
+    height:100%;
+}
+#testimonialCarousel{
+    height: 80%;
+}
+
+@media (max-width: 576px) {
+#testimonial .carousel-content {
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+}
+#testimonial .client-img {
+    margin: 20px auto;
+    position: static;
+}
+
+#testimonial .carousel-in
+#testimonial h3, #testimonial p {
+    text-align: center;
+}
+}
+/*-- End Testimonial Section CSS --*/
+
+/* Footer Section CSS */ 
+.container-fluid {
+    overflow: hidden;
+    margin-top: 10%;
+    background: linear-gradient(183.41deg, #FF9292 -8.57%, #CE6262 82.96%);
+    color:#FFFFFF !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: 'Mulish',sans-serif;
+}
+
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) ;}
+
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) ;
+}
+
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) ;
+}
+
+#rights{
+    font-family: 'Mulish', sans-serif;
+    color: white;
+
+
+}
+#rights img{
+    display: inline-block;
+    margin: 0 1em 0 0 ;
+}
+#rights div{
+    margin-bottom: 2%;
+}
+#footer-img{
+    display: inline-block;
+    width: 35%;
+    height: 25%;
+
+}

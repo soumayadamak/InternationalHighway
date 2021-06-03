@@ -1,0 +1,19 @@
+.colored-butt{
+    background: #CE6262;
+    border-radius: 55px;
+    width : 7em;
+    border: none;
+    
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 39px;
+    /* or 333% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+}
