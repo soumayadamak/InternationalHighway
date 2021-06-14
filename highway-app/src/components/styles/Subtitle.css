@@ -1,0 +1,22 @@
+.first-title{
+    /*position: absolute;
+    left: 11.44%;
+    right: 60.19%;
+    top: 4.82%;
+    bottom: 93.27%;*/
+    padding-left: 10%;
+
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 21px;
+    line-height: 32px;
+    /* or 117% */
+
+    color: #000000;
+    mix-blend-mode: normal;
+    display: inline-block;
+    /*overflow: hidden;*/
+    height: 100%;
+    width: 100%;
+}

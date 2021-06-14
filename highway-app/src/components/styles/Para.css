@@ -1,0 +1,13 @@
+.para{
+    width: 100%;
+    margin-top: 5%;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 32px;
+    /* or 152% */
+
+    color: #7D7987;
+    mix-blend-mode: normal;
+}
