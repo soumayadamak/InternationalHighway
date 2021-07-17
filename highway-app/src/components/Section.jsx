@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row'; 
 import Col from 'react-bootstrap/Col'; 
 
-function  textColumn(prop){
+function  TextColumn(prop){
     return(
         <Col xs = {{span : 12, oder : prop.order}} md = {{span : 6, order : prop.order}}>
             <Subtitle text = {prop.subtitle}/>
@@ -17,14 +17,14 @@ function  textColumn(prop){
         </Col>
     );
 }
-function imageColumn(prop){
+function ImageColumn(prop){
     return (
     <Col xs = {{span : 12, order : prop.order}} md = {{span : 6, order : prop.order}} >
         <Image src={prop.src}  alt={prop.alt} fluid/>
     </Col>
     );
 }
-function row(prop){
+function Row(prop){
     return(
         <Row className="row1">
             <textColumn order = {prop.order} subtitle = {prop.Subtitle} body = {prop.body}/> 
@@ -33,5 +33,8 @@ function row(prop){
     );
 }
 
-// export here then fix break part 
+export default Row; 
+export {ImageColumn, TextColumn}; 
+
+
 
