@@ -1,3 +1,4 @@
+
 import React from "react"; 
 import Button from "./Button"; 
 import Subtitle from "./Subtitle"; 
@@ -29,12 +30,9 @@ function Row(prop){
         <Row className="row1">
             <textColumn order = {prop.order} subtitle = {prop.Subtitle} body = {prop.body}/> 
             <imageColumn order = {prop.order} src={prop.src}  alt={prop.alt}/>
-      </Row>
+        </Row>
     );
 }
 
-export default Row; 
 export {ImageColumn, TextColumn}; 
-
-
 
