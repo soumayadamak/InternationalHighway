@@ -12,7 +12,7 @@
 
 .logo-img {
     position: relative;
-    width: 25%;
+    width: 250px;
     padding: 0px;
     height: 100%;
 }
@@ -50,4 +50,18 @@
 
 .navbar-toggler {
     margin-left: 50%;
+}
+
+.nav-link {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 23px;
+    color: #000000;
+    margin-right: 40px;
+}
+
+.Logo-Container {
+    width: 650px;
 }
