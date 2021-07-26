@@ -25,6 +25,15 @@ function ImageColumn(prop){
     </Col>
     );
 }
+function Section(prop){
+    return(
+        <Row >
+            <textColumn order = {prop.orderText} subtitle = {prop.ubtitle} body = {prop.body}/> 
+            <imageColumn order = {prop.orderImage} src={prop.src}  alt={prop.alt}/>
+      </Row>
+    );
+}
 
+export default Section; 
 export {ImageColumn, TextColumn}; 
 
