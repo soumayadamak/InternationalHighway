@@ -24,7 +24,7 @@ var RepeatModule = React.createClass({
         };
     },
     render: function () {
-
+        // Path to the person image 
         var listItems = this.props.Persons.map(function (person) {
             return (
                 <div>
