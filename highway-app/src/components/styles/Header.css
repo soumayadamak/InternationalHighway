@@ -69,3 +69,15 @@
 .center {
     margin-left: 30%;
 }
+
+@media screen and (max-width: 990px) {
+    .Item {
+        font-size: 15pt;
+    }
+    #navbarScrollingDropdown {
+        font-size: 15pt;
+    }
+    a {
+        text-align: left;
+    }
+}

@@ -22,35 +22,30 @@ var RepeatModule = React.createClass({
                 "Testimony": "Preparing for the SAT as an international student was not an easy task and especially that I intend to apply to US colleges. Although the session only lasted three and a half months, I feel now that I know more and that I am more informed on how to approach colleges thanks to the amazing tips that I received during the session and even afterward.Becoming a student at Highway didn't restrain me from establishing friendships with the tutors, they all are very friendly and almost our age.besides, the classes were very engaging and I always went back home with a spark of motivation given from the tutors."
             },]
         };
-    },
-    render: function () {
-        // Path to the person image 
-        var listItems = this.props.Persons.map(function (person) {
-            return (
-                <div>
-                    <img src={"person.Path"} alt="BigCo Inc. logo" />
-                </div>
-            );
-
-
-        });
-
-
-    },
-    GetPersonsName: function () {
-        return (
-            <div>
-                <h3 key="{person.Name}"></h3>
-            </div>
-        );
-    },
-    GetPersonTestimony: function () {
-        return (
-            <div>
-                <p key="{person.Testimonie}"></p>
-            </div>
-        );
     }
+
+}
+function Image(props) {
+        // Path to the person image 
+        return <img src={"person.Path"} alt="BigCo Inc. logo" />;
+
+    }
+ 
+const element = <Image path={"person.Path"} />;
+ReactDOM.render(element, document.getElementById('root'));
+
+
+ function Name(props) {
+        return
+        <h3 key="{person.Name}"></h3>;
+    },
+/*GetPersonTestimony: function () {
+    return (
+        <div>
+            <p key="{person.Testimonie}"></p>
+        </div>
+    );
+}*/
 });
 
 export default getDefaultProps;
