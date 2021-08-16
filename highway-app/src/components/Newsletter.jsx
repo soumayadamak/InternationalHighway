@@ -1,4 +1,4 @@
-import React, {useState} from "react"; 
+import React, {useCallback, useState} from "react"; 
 import Button from "./Button"; 
 import Break from "./Break";
 import Row from 'react-bootstrap/Row';
@@ -14,11 +14,16 @@ function Newsletter(){
     const [method, setMethod] = useState(false); 
     const [target, setTarget] = useState(false); 
 
-    function submitForm(e){
+    const submitForm = useCallback((e)=>{
         e.preventDefault();
         console.log(emailValue);
         axios.
-            post(`https://us7.api.mailchimp.com/3.0/lists/bb564e7f6a/members`, emailValue)
+            post(`/bb564e7f6a/members`, {EMAIL : emailValue},{
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/x-www-form-urlencoded',
+              }
+            })
             // {
             //     {'Authorization': `Basic `}})
                 .then(response => {
@@ -56,7 +61,7 @@ function Newsletter(){
         // Form.target = "hiddenFrame";
 
         // ;
-    }
+    });
     return(
         <div>
             <Form 

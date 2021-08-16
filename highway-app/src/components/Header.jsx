@@ -11,7 +11,7 @@ function Heading() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light ">
             <div className="Logo-Container" >
-                <a className="" href="#"><img src="./images/logo.png" alt="" className="logo-img"></img></a>
+                <a className="" href="#"><img src="../images/logo.png" alt="" className="logo-img"></img></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" id="Burger"></span>
                 </button>
