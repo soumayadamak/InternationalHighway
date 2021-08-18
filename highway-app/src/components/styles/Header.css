@@ -80,4 +80,8 @@
     a {
         text-align: left;
     }
+    button {
+        font-size: 15pt;
+        padding: 5px;
+    }
 }
