@@ -1,89 +1,48 @@
 import {useCallback, useState} from "react"; 
 import Button from "./Button"; 
 import Break from "./Break";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col'; 
-import Form from 'react-bootstrap/Form';
+import {Row, Col, Form} from 'react-bootstrap';
+import styles from "../styles/Newsletter.module.css"; 
 import axios from "axios"; 
 
 function Newsletter(){
-
-    const [emailValue, setEmail] = useState(''); 
-    const [url, setUrl] = useState(false); 
-    const [method, setMethod] = useState(false); 
-    const [target, setTarget] = useState(false); 
-
-    const submitForm = useCallback((e)=>{
-        e.preventDefault();
-        console.log(emailValue);
-        axios.
-            post(`/bb564e7f6a/members`, {EMAIL : emailValue},{
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/x-www-form-urlencoded',
-              }
-            })
-            // {
-            //     {'Authorization': `Basic `}})
-                .then(response => {
-                    console.log(response);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        setEmail('');
-    
-
-                // {headers: {
-                // "x-apikey": "b60101b7cc0597ca916b6f630116d52f-us7",
-                // "Access-Control-Allow-Origin": "*",
-                // 'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS'}}
-                // responseType: 'json'
-            
-    
-        // setUrl("https://gmail.us7.list-manage.com/subscribe/post-json?c=?");
-        // setMethod("POST");
-        // setTarget("hiddenFrame");
-      
-        // const url = 'https://us7.api.mailchimp.com/3.0/lists/bb564e7f6a/members?skip_merge_validation=<SOME_BOOLEAN_VALUE>'
-        // const url = 'https://gmail.us7.list-manage.com/subscribe/post';
-        // const requestOptions = {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ emailValue})
-        // };
-        // fetch(url, requestOptions)
-        //     .then(response => console.log(response))
-        //     .catch(error => console.log('Form submit error', error));
-        // Form.action = "https://gmail.us7.list-manage.com/subscribe/post-json?c=?";
-        // Form.method = "POST";
-        // Form.target = "hiddenFrame";
-
-        // ;
-    });
+    const [email, setEmail] = useState("")
+    const [state, setState] = useState("IDLE")
+    const [errorMessage, setErrorMessage] = useState(null)
+  
+    const subscribe = async (e) => {
+    e.preventDefault();
+      setState("LOADING")
+      setErrorMessage(null)
+      try {
+        const response = await axios.post("/api/newsletter", { email })
+        setState("SUCCESS")
+      } catch (e) {
+        setErrorMessage(e.response.data.error)
+        setState("ERROR")
+      }
+    }
     return(
         <div>
-            <Form 
-            onSubmit = {submitForm} 
-            >
-            <input type="hidden" name="u" value="199a0e6da31cf6eef4bb76906"/>
-             <input type="hidden" name="id" value="bb564e7f6a"/>
+            <Form >
                 <Row>
                     <Col  md={{ span: 6, offset: 3 }}>
                         <Break text = "Sign up for our newsletter"/>
                         <Form.Group  >
                         {/* <Form.Label>Email</Form.Label> */}
                         <Form.Control id = "email" type="email" placeholder="Enter email"  name = "MERGE0" 
-                        value = {emailValue} onChange = {(e) => {setEmail(e.target.value);}}
+                        value = {email} onChange = {(e) => {setEmail(e.target.value);}}
                         /> 
                         </Form.Group>
                         <div style={{textAlign: "center"}}>
-                        <Button text = "Subscribe" id = "mc-embedded-subscribe"/>
+                        <Button disabled={state === "LOADING"} text = "Subscribe" id = "mc-embedded-subscribe" onClick = {subscribe} />
                         </div>
                     </Col>
                 </Row>           
             </Form>
-            <iframe name="hiddenFrame" src="about:blank" style = {{display : "none"}}/>
+            {state === "ERROR" && (<p>{errorMessage}</p>)}
+            {state === "SUCCESS" && (<p>success</p>)}
+
         </div>
     );
 }
