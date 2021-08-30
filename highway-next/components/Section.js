@@ -1,12 +1,9 @@
 
-import React from "react"; 
 import Button from "./Button"; 
 import Subtitle from "./Subtitle"; 
-import "./styles/Section.css"; 
+import styles from "../styles/Section.module.css";
 import Para from "./Para"; 
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row'; 
-import Col from 'react-bootstrap/Col'; 
+import {Image, Row, Col} from 'react-bootstrap';
 
 function  TextColumn(prop){
     return(
@@ -28,8 +25,9 @@ function ImageColumn(prop){
 function Section(prop){
     return(
         <Row >
-            <textColumn order = {prop.orderText} subtitle = {prop.ubtitle} body = {prop.body}/> 
-            <imageColumn order = {prop.orderImage} src={prop.src}  alt={prop.alt}/>
+ 
+            <TextColumn order = {prop.orderText} subtitle = {prop.subtitle} body = {prop.body}/> 
+            <ImageColumn order = {prop.orderImage} src={prop.src}  alt={prop.alt}/> 
       </Row>
     );
 }

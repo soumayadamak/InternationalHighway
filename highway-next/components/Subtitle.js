@@ -16,8 +16,8 @@ return(
             color: #000000;
             mix-blend-mode: normal;
             display: inline-block;
-            height: 100%;
-            width: 100%;
+            // height: 100%;
+            // width: 100%;
         }
 
       `}</style>

@@ -49,7 +49,7 @@ export default async (req, res) => {
     return res.status(201).json({ error: null })
   } catch (error) {
     return res.status(400).json({
-      error: error
+      error: "Ooops your email is wrong"
     });
   }
 }

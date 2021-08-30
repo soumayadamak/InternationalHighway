@@ -13,12 +13,12 @@ export default function Break(prop){
                 height: 2px;
                 background: #000000;
                 border-radius: 5px;
-                margin:auto;
                 
             }
             .break{
                 text-align: center;
                 padding-top: 5%;
+                margin: auto;
             }
 
       `}</style>
