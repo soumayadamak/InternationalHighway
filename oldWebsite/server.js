@@ -21,7 +21,7 @@ app.get("/guidance", function(req,res){
   res.sendFile(__dirname + "/guidance.html"); 
 });
 
-var base = new Airtable({apiKey: 'keyDceTY6r7DUo3QF'}).base('appvfKpOqJJI8OcPQ');
+var base = new Airtable({apiKey: process.env.apikey}).base(process.env.base);
 
 //submit form for the SAT page 
 app.post("/SAT", function(req,res){
